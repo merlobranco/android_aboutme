@@ -21,19 +21,24 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.doneButton.setOnClickListener {
-            // It refers to the Done Button
+            // it: refers to the Done Button
             addNickname(it)
-
-            // Hide the keyboard.
-            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(it.windowToken, 0)
         }
     }
 
     private fun addNickname(view: View) {
-        binding.nicknameText.text = binding.nicknameEdit.text
-        binding.nicknameEdit.visibility = View.GONE
-        view.visibility = View.GONE
-        binding.nicknameText.visibility = View.VISIBLE
+
+        binding.apply {
+            nicknameText.text = nicknameEdit.text
+            // In order to refresh the UI with the new data, invalidate all the binding expressions
+            // so they recreate with correct data
+            nicknameEdit.visibility = View.GONE
+            view.visibility = View.GONE
+            nicknameText.visibility = View.VISIBLE
+        }
+
+        // Hide the keyboard.
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
