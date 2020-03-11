@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">About Me</string>
     <string name="name">Brais Cidras</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="some_long_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        \n\nAt consectetur lorem donec massa sapien faucibus.
+        \n\nMorbi tristique senectus et netus et.
+        \n\nEgestas congue quisque egestas diam in arcu cursus.
+        \n\nId ornare arcu odio ut sem. Magnis
+        \n\ndis parturient montes nascetur ridiculus mus mauris vitae ultricies.
+        \n\nPulvinar pellentesque habitant morbi tristique senectus et netus.
+        \n\nInulla posuere sollicitudin aliquam ultrices.
+        \n\nRisus commodo viverra maecenas accumsan lacus vel.
+        \n\nNulla at volutpat diam ut venenatis tellus in metus.\n\n</string>
 </resources>
